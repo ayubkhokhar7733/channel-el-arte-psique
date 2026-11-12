@@ -1,4 +1,4 @@
-name: Mejora Día a Día Cloud Repurposer
+name: El Arte de la Psique 2.0 Cloud Repurposer
 
 on:
   workflow_dispatch:
@@ -8,9 +8,9 @@ on:
         required: true
         type: string
       speaker_name:
-        description: 'Speaker Name (default: Dra. Nazareth Castellanos)'
+        description: 'Speaker Name (default: Carl Jung)'
         required: false
-        default: 'Dra. Nazareth Castellanos'
+        default: 'Carl Jung'
         type: string
       speaker_image:
         description: 'Speaker Photo / Avatar (Image URL or base64 data)'
@@ -168,6 +168,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mejora-dia-a-dia-output
+          name: el-arte-psique-output
           path: output/
           retention-days: 14

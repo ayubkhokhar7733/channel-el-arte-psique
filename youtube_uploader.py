@@ -179,7 +179,7 @@ def get_or_create_playlist(youtube, category: str) -> str:
             body={
                 "snippet": {
                     "title": clean_category,
-                    "description": f"Colección seleccionada de {clean_category} por Mejora Día a Día.",
+                    "description": f"Colección seleccionada de {clean_category} por El Arte de la Psique 2.0.",
                     "defaultLanguage": "es",
                 },
                 "status": {

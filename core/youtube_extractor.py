@@ -99,8 +99,8 @@ def extract_youtube_audio_and_metadata(url: str, output_dir: str = None) -> dict
                 except Exception as e:
                     print(f"[youtube_extractor] Warning loading {info_json_path}: {e}")
 
-            oembed_title = "Cómo Transformar Tu Mente y Cerebro Cada Día | Dra. Nazareth Castellanos"
-            oembed_author = "Mejora Día a Día"
+            oembed_title = "El Poder Oculto de Tu Mente Inconsciente | Carl Jung"
+            oembed_author = "El Arte de la Psique 2.0"
             try:
                 oe = requests.get(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json", timeout=6)
                 if oe.status_code == 200:
@@ -115,8 +115,8 @@ def extract_youtube_audio_and_metadata(url: str, output_dir: str = None) -> dict
                 "audio_path": c_path,
                 "video_id": video_id,
                 "title": oembed_title,
-                "description": "#nazarethcastellanos #mejoradiaadia #neurociencia #desarrollopersonal\nEn este video descubrirás herramientas prácticas de neurociencia, psicología y bienestar mental.",
-                "tags": ["nazareth castellanos", "dra nazareth castellanos", "mejora dia a dia", "neurociencia", "psicologia", "desarrollo personal"],
+                "description": "#carljung #elartedelapsique #psicologia #filosofia\nEn este video descubrirás enseñanzas profundas de psicología analítica, mente subconsciente y crecimiento interior.",
+                "tags": ["carl jung", "el arte de la psique", "psicologia", "filosofia", "inconsciente", "desarrollo personal"],
                 "uploader": oembed_author,
                 "duration": actual_dur,
                 "thumbnail_url": f"https://img.youtube.com/vi/{video_id}/maxresdefault.jpg",
@@ -357,6 +357,11 @@ def transcribe_audio_groq(audio_path: str, srt_output_path: str = None) -> dict:
 # ---------------------------------------------------------------------------
 
 KNOWN_SPEAKERS = {
+    "carl jung": {"name": "Carl Jung", "title": "Swiss psychiatrist and psychotherapist"},
+    "c.g. jung": {"name": "Carl Jung", "title": "Swiss psychiatrist and psychotherapist"},
+    "carl gustav jung": {"name": "Carl Jung", "title": "Swiss psychiatrist and psychotherapist"},
+    "arthur schopenhauer": {"name": "Arthur Schopenhauer", "title": "German Philosopher"},
+    "schopenhauer": {"name": "Arthur Schopenhauer", "title": "German Philosopher"},
     "nazareth castellanos": {"name": "Dra. Nazareth Castellanos", "title": "Neurocientífica y Autora"},
     "dra. nazareth": {"name": "Dra. Nazareth Castellanos", "title": "Neurocientífica y Autora"},
     "dra nazareth": {"name": "Dra. Nazareth Castellanos", "title": "Neurocientífica y Autora"},
@@ -626,8 +631,8 @@ def generate_speaker_badge_overlay(
     draw.text((bar_x + 26, bar_y + 10), display_name, font=font_name, fill=(255, 255, 255, 255))
     draw.text((bar_x + 26, bar_y + 39), role_text, font=font_sub, fill=(255, 218, 64, 245))
 
-    # ── 3. Subtle Top-Right Channel Watermark ("MEJORA DÍA A DÍA") ──────────
-    wm_text = "MEJORA DÍA A DÍA"
+    # ── 3. Subtle Top-Right Channel Watermark ("EL ARTE DE LA PSIQUE 2.0") ──────────
+    wm_text = "EL ARTE DE LA PSIQUE 2.0"
     wm_bbox = draw.textbbox((0, 0), wm_text, font=font_wm)
     wm_tw = wm_bbox[2] - wm_bbox[0]
     wm_th = wm_bbox[3] - wm_bbox[1]

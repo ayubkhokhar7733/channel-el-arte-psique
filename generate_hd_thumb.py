@@ -205,14 +205,14 @@ def create_hd_recreation(
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Regenerate high-CTR 1920x1080 thumbnail for Mejora Día a Día.")
+    parser = argparse.ArgumentParser(description="Regenerate high-CTR 1920x1080 thumbnail for El Arte de la Psique 2.0.")
     parser.add_argument("--src", required=True, help="Source reference thumbnail image path")
     parser.add_argument("--lines", nargs="+", required=True, help="Headline lines (2-4 lines)")
     parser.add_argument("--colors", nargs="+", default=["yellow", "white", "yellow"], help="Line colors: white, yellow, gold, red")
     parser.add_argument("--side", choices=["left", "right"], default="left", help="Side where speaker portrait appears")
     parser.add_argument("--theme", choices=["obsidian", "crimson"], default="obsidian", help="Background gradient theme")
     parser.add_argument("--highlight", type=int, default=-1, help="0-based index of line to highlight in a red box")
-    parser.add_argument("--badge", default="DRA. NAZARETH", help="Speaker badge text")
+    parser.add_argument("--badge", default="CARL JUNG", help="Speaker badge text")
     parser.add_argument("--out", required=True, help="Output JPEG path")
     args = parser.parse_args()
 

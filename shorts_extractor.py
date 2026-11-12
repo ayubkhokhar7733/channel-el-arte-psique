@@ -250,16 +250,16 @@ def extract_shorts(
             short_title = f"{segment_hook[:55]} #Shorts"
             short_desc = (
                 f"{segment_hook}\n\n"
-                f"Suscríbete a Mejora Día a Día para tu dosis diaria de neurociencia, psicología y bienestar.\n\n"
-                f"#Shorts #MejoraDiaADia #NazarethCastellanos #Neurociencia #Psicologia #CrecimientoPersonal"
+                f"Suscríbete a El Arte de la Psique 2.0 para descubrir sabiduría psicológica y filosófica profunda.\n\n"
+                f"#Shorts #ElArteDeLaPsique #CarlJung #Psicologia #Filosofia #CrecimientoPersonal"
             )
-            short_tags = ["Shorts", "YouTubeShorts", "MejoraDiaADia", "NazarethCastellanos", "Neurociencia", "Psicologia", base_topic.lower()[:30]]
+            short_tags = ["Shorts", "YouTubeShorts", "ElArteDeLaPsique", "CarlJung", "Psicologia", "Filosofia", base_topic.lower()[:30]]
         else:
             short_title = f"{segment_hook[:55]} #Shorts"
             short_desc = (
                 f"{segment_hook}\n\n"
-                f"Subscribe to Mejora Día a Día for daily neuroscience, psychology, and self-improvement insights.\n\n"
-                f"#Shorts #Motivation #Mindset #Neuroscience"
+                f"Subscribe to El Arte de la Psique 2.0 for deep psychology, philosophy, and self-discovery insights.\n\n"
+                f"#Shorts #CarlJung #Psychology #Philosophy"
             )
             short_tags = ["Shorts", "YouTubeShorts", "Motivation", "Mindset", "Wisdom", base_topic.lower()[:30]]
 
